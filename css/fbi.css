@@ -1,0 +1,29 @@
+.imagenes{
+    left: 455px;
+    top: 109px;
+    display: inline;
+    position: absolute;
+}
+
+.parrafo{
+    position: relative;
+    top: 400px;
+    left: 400px;
+    text-align: justify;
+    width: 900px;
+    font-size: 25px;
+}
+
+button {
+    background: #e62143;
+    border-radius: 11px;
+    box-sizing: border-box;
+    color: #fff;
+    width: 20%;
+    height: 60px;
+    margin-left: 400px;
+  }
+  
+button:hover{
+    display: none;
+}

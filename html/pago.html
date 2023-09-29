@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CHECKOUT</title>
+        <link rel="stylesheet" href="../css/pago.css">
+        <script src="../js/users.js"></script>
+        <script src="../js/check.js"></script>
+        <script src="../js/products.js"></script>
+        <link rel="shortcut icon" href="../images/logo.ico">
+    </head>
+    <body>
+<div class="checkout">
+  <div class="credit-card-box">
+    <div class="flip">
+      <div class="front">
+        <div class="chip"></div>
+        <div class="logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Visa_Logo.png/640px-Visa_Logo.png" width="70px">
+        </div>
+        <div class="number">
+          <span id="numero"></span><span id="numero1"></span><span id="numero2"></span><span id="numero3"></span>
+        </div>
+        <div class="card-holder">
+          <label>Nombre Titular</label>
+          <label id="nombretitu"></label>
+          <div></div>
+        </div>
+        <div class="card-expiration-date">
+          <label>Caduca</label>
+          <span id="dia"></span><span id="mes"></span>
+          <div></div>
+        </div>
+      </div>
+      <div class="back">
+        <div class="strip"></div>
+        <div class="logo">
+        </div>
+        <div class="ccv">
+          <label>CCV</label>
+          <span id="cvv"></span>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form class="form" id="formulario">
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Lucho">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario-error">El nombre tiene que ser de 4 a 16 dígitos y solo puede contener letras.</p>
+			</div>
+			<div class="formulario__grupo" id="grupo__apellido">
+				<label for="apellido" class="formulario__label">Apellido</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="apellido" id="apellido" placeholder="Portuano">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario-error">El apellido tiene que ser de 4 a 16 dígitos y solo puede contener letras.</p>
+			</div>
+    <div>
+      <label for="direccion">Direccion</label>
+      <input type="text" id="direccion" placeholder="Calle de Lucho Portuano 6"/>
+    </div>
+    <div class="formulario__grupo" id="grupo__correo">
+      <label for="correo" class="formulario__label">Correo Electrónico</label>
+      <div class="formulario__grupo-input">
+        <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+      </div>
+      <p class="formulario-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+    </div>
+
+    <div class="formulario__grupo" id="grupo__telefono">
+      <label for="telefono" class="formulario__label">Teléfono</label>
+      <div class="formulario__grupo-input">
+        <input type="text" class="formulario__input" name="telefono" id="telefono" maxlength="9" placeholder="4491234567">
+        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+      </div>
+      <p class="formulario-error">El telefono solo puede contener numeros y el maximo son 9 dígitos.</p>
+    </div>
+    <div>
+      <label for="card-number">Numero de Tarjeta</label>
+      <input type="num"  id="card-number" class="input-cart-number" required maxlength="4" minlength="4" onkeyup="mostrarnum(this.value)" placeholder="1234"/>
+      <input type="num"  id="card-number-1" class="input-cart-number" required maxlength="4" minlength="4" onkeyup="mostrarnum1(this.value)" placeholder="5678"/>
+      <input type="num"  id="card-number-2" class="input-cart-number" required maxlength="4" minlength="4" onkeyup="mostrarnum2(this.value)" placeholder="9012"/>
+      <input type="num"  id="card-number-3" class="input-cart-number" required maxlength="4" minlength="4" onkeyup="mostrarnum3(this.value)" placeholder="3456"/>
+    </div>
+    <div class="formulario__grupo" id="grupo__nombre_tarjeta">
+      <label for="nombre_tarjeta" class="formulario__label">Nombre en Tarjeta</label>
+      <div class="formulario__grupo-input">
+        <input type="text" class="formulario__input" name="nombre_tarjeta" id="nombre_tarjeta" onkeyup="mostrar(this.value)" placeholder="Lucho">
+        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+      </div>
+      <p class="formulario-error">El nombre tiene que ser de 4 a 16 dígitos y solo puede contener letras.</p>
+    </div>
+    <div class="div-expiration">
+      <label for="card-expiration-month">Fecha de Caducidad</label>
+      <input type="num" name="dia" id="card-expiration-day" required maxlength="2" minlength="2" onkeyup="mostrardia(this.value)" placeholder="12"/>
+      <input type="num" name="mes" id="card-expiration-month" required maxlength="2" minlength="2" onkeyup="mostrarmes(this.value)" placeholder="12"/>
+    </div>
+    <div class="div-ccv">
+      <label for="card-ccv">CCV</label>
+      <input type="text" id="card-ccv" maxlength="3" required onkeyup="mostrarCVV(this.value)" placeholder="123"/>
+    </div>
+    <button type="submit" class="btn">PAGAR</button>
+    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">En un momento sera redirigido</p>
+    <div class="formulario__mensaje" id="formulario__mensaje">
+      <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+    </div>
+  </form>
+      </div>
+      <div class="tabladiv">
+        <h1 class="tablatit">Carrito</h1>
+        <div class="name">
+          <table id="tabla">
+        </table>
+        </div>
+        <hr>
+        <div class="total">
+                <span>Total: </span><span id="total"></span><span> €</span>
+        </div>
+      </div>
+        <script src="../js/pay.js"></script>
+        <script src="../js/validarform.js"></script>
+    </body>
+</html>

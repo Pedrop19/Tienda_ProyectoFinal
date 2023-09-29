@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  padding-top: 80px;
+  background-image: url("../images/bg.jpg");
+}
+
+/* header */
+
+.header {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  z-index: 3;
+  width: 100%;
+  height: 80px;
+  left: 0;
+  top: 0;
+  position: fixed;
+  font-family: "Play", sans-serif;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  font-size: 15px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  padding: 10px 20px;
+  width: 80px;
+}
+
+.header .menu-btn {
+  display: none;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 30px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+.wrapper {
+  height: 418px;
+  width: 1560px;
+  margin: 20px 10px 20px -51px;
+}
+
+.product-img {
+  float: left;
+  background-color: transparent;
+  translate: 60px;
+}
+
+.product-img img {
+  border-radius: 10px 20px 0 7px;
+  margin: 14px auto;
+}
+
+.product-info {
+  float: left;
+  height: 416px;
+  width: 1050px;
+  border-radius: 10px 7px 10px 7px;
+  margin-left: -112px;
+  font-family: "Play", sans-serif;
+  background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.product-text {
+  height: 300px;
+  width: 900px;
+}
+
+.product-text h1 {
+  margin: 0 0 0 350px;
+  padding-top: 52px;
+  font-family: "Play", sans-serif;
+  font-size: 34px;
+  color: black;
+}
+
+.product-text p {
+  height: 140px;
+  margin: 40px 0 0 195px;
+  color: white;
+  line-height: 1.7em;
+  font-size: 18px;
+  font-weight: lighter;
+  overflow: hidden;
+}
+
+.product-price-btn {
+  height: 103px;
+  width: 327px;
+  margin: 17px 0 0 10px;
+  position: relative;
+}
+
+.product-price-btn #price {
+  display: inline-block;
+  position: absolute;
+  top: -13px;
+  height: 50px;
+  margin: 0 0 0 184px;
+  font-size: 28px;
+  font-weight: lighter;
+  color: red;
+}
+
+.tabladiv {
+  float: right;
+  top: 350px;
+  width: 400px;
+  text-align: center;
+  left: 1250px;
+  position: fixed;
+  background-color: white;
+  border-radius: 40px;
+  padding: 20px;
+  font-family: "Play", sans-serif;
+}
+
+#tabla {
+  border-spacing: 15px;
+  font-size: 18px;
+}
+
+.total {
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.tablatit {
+  color: white;
+  background-color: blue;
+  border-radius: 10px;
+  font-family: "Play", sans-serif;
+}
+
+.comprar {
+  align-items: center;
+  background-color: white;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  left: 140px;
+  margin-top: 10px;
+}
+
+.comprar:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+.comprar:hover:after {
+  transform: translate(0, 0);
+}
+
+.comprar:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.comprar:hover {
+  outline: 0;
+}
+
+/* .eliminartodo {
+  align-items: center;
+  background-color: white;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  left: 140px;
+  margin-top: 10px;
+}
+
+.eliminartodo:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+.eliminartodo:hover:after {
+  transform: translate(0, 0);
+}
+
+.eliminartodo:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.eliminartodo:hover {
+  outline: 0;
+} */
+
+
+@media (min-width: 768px) {
+  .comprar {
+    padding: 0 40px;
+  }
+}
+
+.boton-comprar {
+  appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Play", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 800px;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.boton-comprar:focus {
+  text-decoration: none;
+}
+
+.boton-comprar:hover {
+  text-decoration: none;
+}
+
+.boton-comprar:active {
+  box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.boton-comprar:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .boton-comprar {
+    padding: 12px 50px;
+  }
+}
+
+@media (max-width: 1800px) {
+  .tabladiv {
+    width: 420px;
+    text-align: center;
+    left: 1055px;
+  }
+
+  .comprar{
+    left: 150px;
+  }
+
+  .product-info {
+    width: 860px;
+  }
+
+  .product-text h1{
+    margin: 0 0 0 250px;
+  }
+  .product-text p {
+    padding: 0 86px 10px 0;
+  }
+  
+  .product-price-btn {
+    margin: 38px 0 0 -174px;
+  }
+  
+  .product-price-btn #price {
+    margin: 0 0 0 365px;
+  }
+}

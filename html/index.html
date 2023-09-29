@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>WEBETIQUETANDO</title>
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/users.js"></script>
+        <script src="../js/check.js"></script>
+        <script src="../js/products.js"></script>
+        <script src="../js/productos.js"></script>
+
+        <link rel="shortcut icon" href="../images/logo.ico">
+    </head>
+    <body>
+        <script src="../js/index.js"></script>
+        <header class="header">
+            <img src="../images/logowl.png" class="logo">
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="menu">
+              <li><a href="../html/login.html">Login</a></li>
+              <img src="../images/login.png" width="70px">
+            </ul>
+        </header>
+        <div class="tabladiv">
+            <h1 class="tablatit">Carrito</h1>
+            <div class="name">
+              <table id="tabla">
+            </table>
+            </div>
+            <hr>
+            <div class="total">
+                    <span>Total: </span><span id="total"></span><span> €</span>
+            </div>
+            <div>
+                <button class="comprar" role="button" onclick="comprar()">Pagar</button>
+            </div>
+            <!-- <div>
+                <button class="eliminartodo" role="button" onclick="eliminartodo()">Vaciar Carrito</button>
+            </div> -->
+        </div>
+    </body>
+</html>
